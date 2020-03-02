@@ -1,0 +1,24 @@
+{
+  "name": "electron-todoist",
+  "version": "1.0.0",
+  "description": "A desktop app for adding formatted to-do's to Todoist",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaellhobart/electron-todoist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaellhobart/electron-todoist/issues"
+  },
+  "homepage": "https://github.com/michaellhobart/electron-todoist#readme",
+  "devDependencies": {
+    "electron": "^8.0.2"
+  }
+}

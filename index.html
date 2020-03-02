@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Todoist App</title>
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <h1>Todoist App</h1>
+    <div class="">
+      <span>Please enter a new To-Do</span>
+    </div>
+    <div class="">
+      <input type="text" name="td-sender" value="" placeholder="Enter Sender Name" id="td-sender">
+      <input type="text" name="td-task" value="" placeholder="Enter Task" id="td-task">
+      <button type="button" name="td-submit" onclick="submitTask()">Send Task</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="functions.js"></script>
+</html>
