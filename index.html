@@ -5,16 +5,25 @@
     <title>Todoist App</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/tachyons.css">
   </head>
   <body>
-    <h1>Todoist App</h1>
-    <div class="">
-      <span>Please enter a new To-Do</span>
-    </div>
-    <div class="">
-      <input type="text" name="td-sender" value="" placeholder="Enter Sender Name" id="td-sender">
-      <input type="text" name="td-task" value="" placeholder="Enter Task" id="td-task">
-      <button type="button" name="td-submit" onclick="submitTask()">Send Task</button>
+    <div class="vh-100 flex flex-column items-center">
+      <div class="mt7 mb4 flex flex-column items-center">
+        <h1 class="" >Todoist App</h1>
+        <span>Please enter a new To-Do</span>
+      </div>
+      <div class="flex flex-column justify-center">
+        <div class="">
+          <input type="text" name="td-sender" value="" placeholder="Enter Sender Name" id="td-sender">
+          <input type="text" name="td-task" value="" placeholder="Enter Task" id="td-task">
+        </div>
+        <div class="w-100 mt5 flex justify-center">
+          <button type="button" name="td-submit" onclick="submitTask()" >Send Task</button>
+        </div>
+      </div>
     </div>
   </body>
   <script type="text/javascript" src="./functions.js"></script>
