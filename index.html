@@ -17,11 +17,14 @@
       </div>
       <div class="flex flex-column justify-center">
         <div class="">
-          <input type="text" name="td-sender" value="" placeholder="Enter Sender Name" id="td-sender">
-          <input type="text" name="td-task" value="" placeholder="Enter Task" id="td-task">
+          <input type="text" name="td-sender" value="Test Name" placeholder="Enter Sender Name" id="td-sender">
+          <input type="text" name="td-task" value="Test Task" placeholder="Enter Task" id="td-task">
         </div>
-        <div class="w-100 mt5 flex justify-center">
+        <div class="w-100 mt5 flex justify-center" id="submit-task-button">
           <button type="button" name="td-submit" onclick="submitTask()" >Send Task</button>
+        </div>
+        <div class="w-100 mt5 dn justify-center" id="sending-message">
+          <h4>Sending...</h4>
         </div>
       </div>
     </div>
