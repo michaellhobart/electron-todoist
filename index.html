@@ -10,21 +10,28 @@
     <link rel="stylesheet" href="css/tachyons.css">
   </head>
   <body>
-    <div class="vh-100 flex flex-column items-center">
-      <div class="mt7 mb4 flex flex-column items-center">
-        <h1 class="" >Todoist App</h1>
-        <span>Please enter a new To-Do</span>
+    <div class="flex flex-row">
+      <div class="bg-red pa3">
+        <h3>Project</h3>
+        <ul id="projects-list">
+        </ul>
       </div>
-      <div class="flex flex-column justify-center">
-        <div class="">
-          <input type="text" name="td-sender" value="Test Name" placeholder="Enter Sender Name" id="td-sender">
-          <input type="text" name="td-task" value="Test Task" placeholder="Enter Task" id="td-task">
+      <div class="vh-100 flex flex-column items-center bg-blue">
+        <div class="mt7 mb4 flex flex-column items-center">
+          <h1 class="" >Todoist App</h1>
+          <span>Please enter a new To-Do</span>
         </div>
-        <div class="w-100 mt5 flex justify-center" id="submit-task-button">
-          <button type="button" name="td-submit" onclick="submitTask()" >Send Task</button>
-        </div>
-        <div class="w-100 mt5 dn justify-center" id="sending-message">
-          <h4>Sending...</h4>
+        <div class="flex flex-column justify-center">
+          <div class="">
+            <input type="text" name="td-sender" value="Test Name" placeholder="Enter Sender Name" id="td-sender">
+            <input type="text" name="td-task" value="Test Task" placeholder="Enter Task" id="td-task">
+          </div>
+          <div class="w-100 mt5 flex justify-center" id="submit-task-button">
+            <button type="button" name="td-submit" onclick="submitTask()" >Send Task</button>
+          </div>
+          <div class="w-100 mt5 dn justify-center" id="sending-message">
+            <h4>Sending...</h4>
+          </div>
         </div>
       </div>
     </div>

@@ -7,6 +7,25 @@ const tempId = uuidv4();
 const submitButton = document.getElementById('submit-task-button');
 const sendMessage = document.getElementById('sending-message');
 
+const projectsList = document.getElementById('projects-list')
+
+
+
+
+window.addEventListener("load", () => {
+  axios.get('https://api.todoist.com/rest/v1/projects',{
+    headers: {
+      'Authorization': `Bearer 9a0f6ecddbf1a5ff14f92db52c4e48a3a2cea00b`
+    }
+  }).then( res => {
+    res.data.map(proj => {
+      const projLI = document.createElement("li")
+      projLI.innerText = proj.name
+      projectsList.appendChild(projLI)
+    })
+  })
+})
+
 const newProj = (sender, task) => {
   submitButton.classList.toggle('flex')
   submitButton.classList.toggle('dn')
@@ -16,14 +35,14 @@ const newProj = (sender, task) => {
       method: 'post',
       url: 'https://api.todoist.com/sync/v8/sync',
       data : {
-        token: "<token>",
+        token: "9a0f6ecddbf1a5ff14f92db52c4e48a3a2cea00b",
         commands: [{
           type: "item_add",
           temp_id: uuidv4(),
           uuid: uuidv4(),
           args: {
             content: `${task} | ${sender}`,
-            project_id: "<project id>",
+            project_id: "2204268490",
           }
         }]
       }
