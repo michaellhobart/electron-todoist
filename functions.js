@@ -22,9 +22,15 @@ var state = {
   currentProj: ""
 }
 
+function setCurrentProjPersist(proj){
+  localStorage.setItem("current-project", proj)
+}
+
+
 
 function handleProjectClick(e){
   state.currentProj = e.target.id
+  setCurrentProjPersist(e.target.id)
   Array.from(document.getElementsByClassName('project-button')).map(btn => btn.style.fontWeight = "400")
   document.getElementById(e.target.id).style.fontWeight = "900"
 }
@@ -36,7 +42,12 @@ window.addEventListener("load", () => {
       'Authorization': `Bearer ${token}`
     }
   }).then( res => {
-    state.currentProj = res.data[0].id
+    if (localStorage.getItem("current-project")){
+      state.currentProj = localStorage.getItem("current-project")
+    } else {
+      state.currentProj = res.data[0].id
+    }
+
     res.data.map(proj => {
       const projLI = document.createElement("li")
       projLI.innerText = proj.name
