@@ -24,9 +24,7 @@ var state = {
 
 
 function handleProjectClick(e){
-  console.log(`event: ${e.target.id}`)
   state.currentProj = e.target.id
-  console.log("updated State: " + state.currentProj);
   Array.from(document.getElementsByClassName('project-button')).map(btn => btn.style.fontWeight = "400")
   document.getElementById(e.target.id).style.fontWeight = "900"
 }
@@ -38,9 +36,7 @@ window.addEventListener("load", () => {
       'Authorization': `Bearer ${token}`
     }
   }).then( res => {
-    console.log(res);
     state.currentProj = res.data[0].id
-    console.log(`state:${state.currentProj}`);
     res.data.map(proj => {
       const projLI = document.createElement("li")
       projLI.innerText = proj.name
