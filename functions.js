@@ -50,6 +50,7 @@ window.addEventListener("load", () => {
       projLI.addEventListener("click", e => handleProjectClick(e))
       projectsList.appendChild(projLI)
     })
+    document.getElementById(state.currentProj).style.fontWeight = "900"
   })
 })
 
