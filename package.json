@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/michaellhobart/electron-todoist#readme",
   "devDependencies": {
-    "electron": "^8.0.2"
+    "electron": "^8.5.2"
   },
   "dependencies": {
     "axios": "^0.19.2",
