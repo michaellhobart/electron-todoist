@@ -22,7 +22,7 @@
     "electron": "^8.0.2"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dot-env": "0.0.1",
     "uuid": "^7.0.1"
   }
